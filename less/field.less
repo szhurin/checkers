@@ -1,0 +1,33 @@
+// main: main.less
+@blackFieldColor: #222;
+@whiteFieldColor: #aaa;
+@redFieldColor: #a88;
+
+
+ ._base_cell() {
+    float: left;
+    display: inline-block;
+     position: relative;
+}
+._field_wrap {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    margin: 5% 0;
+    padding: 0 2%;
+}
+._field_container {
+    padding: 20px;
+}
+._w_cell {
+    ._base_cell;
+    background-color: @whiteFieldColor;
+}
+._b_cell {
+    ._base_cell;
+    background-color: @blackFieldColor;
+}
+._red_cell {
+    
+    background-color: @redFieldColor !important;
+}

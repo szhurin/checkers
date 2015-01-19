@@ -1,0 +1,57 @@
+// main: main.less
+@blackColor: #555;
+@blackQueenBorderColor: #eee;
+@whiteColor: #eee;
+@whiteQueenBorderColor: #555;
+@redFieldColor: #a88;
+
+
+.__checker_base(){
+    border-radius: 50%;
+    position: absolute;
+    width: 66%;
+    padding-bottom: 66%;
+    margin-top: 16.5%;
+    margin-left: 16.5%;
+}
+
+ ._w_checker {
+    background-color: @whiteColor;
+    .__checker_base;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+._b_checker {
+    background-color: @blackColor;
+    .__checker_base;
+    box-shadow: inset 0 0 10px rgba(250,250,250,0.5);
+}
+
+._b_checker._checker_selected {
+    background-color: lighten(@blackColor, 20%);
+    box-shadow: 0 0 20px rgba(250,250,250,0.9);
+}
+._w_checker._checker_selected {
+    background-color: darken(@whiteColor, 20%);
+    box-shadow: 0 0 20px rgba(250,250,250,0.9);
+}
+
+._b_checker._checker_taken, ._w_checker._checker_taken {
+    width: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    margin: 0;
+    float: left;
+}
+
+._b_checker._checker_queen{
+    border: 5px solid @blackQueenBorderColor;
+    box-sizing: border-box;
+    padding-bottom: 55%;
+    margin-top: 16.5%;
+}
+._w_checker._checker_queen{
+    border: 5px solid @whiteQueenBorderColor;
+    box-sizing: border-box;
+    padding-bottom: 55%;
+    margin-top: 16.5%;
+}
